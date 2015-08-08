@@ -140,6 +140,22 @@ class LLDBController(object):
       #self.ui.update(self.target, "", self)
     else:
       self.doLaunch('-s' not in args, "")
+  
+  def doAttachById(self, process_id):
+    """ Handle process attach.  """
+    error = lldb.SBError()
+    
+    self.processListener = lldb.SBListener("process_event_listener")
+    self.target = self.dbg.CreateTarget('')
+    self.process = self.target.AttachToProcessWithID(self.processListener, int(process_id), error)
+    if not error.Success():
+      sys.stderr.write("Error during attach: " + str(error))
+      return
+
+    self.ui.activate()
+    self.pid = self.process.GetProcessID()
+
+    print "Attached to %s (pid=%d)" % (process_id, self.pid)
 
   def doAttach(self, process_name):
     """ Handle process attach.  """

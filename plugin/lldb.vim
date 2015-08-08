@@ -20,6 +20,7 @@ let s:lldb_commands = [
 \ ['Lstart',           '',                  '*',   'ctrl.doLaunch(True, "<args>")'],
 \ ['Lrun',             '',                  '*',   'ctrl.doLaunch(False, "<args>")'],
 \ ['Lattach',          '',                  '1',   'ctrl.doAttach("<args>")'],
+\ ['LattachId',        '',                  '1',   'ctrl.doAttachById("<args>")'],
 \ ['Ldetach',          '',                  '0',   'ctrl.doDetach()'],
 \ ['Lregexpattach',    's:CompleteCommand', '*',   'ctrl.doCommand("_regexp-attach", "<args>")'],
 \ ['Lregexpbreak',     's:CompleteCommand', '*',   'ctrl.doCommand("_regexp-break", "<args>")'],
