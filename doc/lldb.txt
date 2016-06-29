@@ -45,11 +45,11 @@ GETTING STARTED                                 *lldb-start*
 To quickly get started compile (don't forget to compile with debugging
 symbols) and start some program. Then open a source file belonging to the
 program in vim and execute ':Lattach <program-name>.' Then select some
-line in the source file and execute ':Lbreakpoint' to set a breakpint at
+line in the source file and execute ':Lbreakpoint' to set a breakpoint at
 the current line.
 
 Once the program reaches the specified breakpoint you will be able to
-inspect state and step through the proram using the commands described below.
+inspect state and step through the program using the commands described below.
 
 COMMANDS                                        *lldb-commands*
 
