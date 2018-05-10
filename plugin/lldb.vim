@@ -37,6 +37,7 @@ let s:lldb_commands = [
 \ ["Lexpression",      "s:CompleteCommand", "*",   'ctrl.doCommand("expression", "<args>")'],
 \ ["Lhelp",            "s:CompleteCommand", "*",   'ctrl.doCommand("help", "<args>")'],
 \ ["Llog",             "s:CompleteCommand", "*",   'ctrl.doCommand("log", "<args>")'],
+\ ["Lmemory",          "s:CompleteCommand", "*",   'ctrl.doCommand("memory", "<args>")'],
 \ ["Lplatform",        "s:CompleteCommand", "*",   'ctrl.doCommand("platform","<args>")'],
 \ ["Lplugin",          "s:CompleteCommand", "*",   'ctrl.doCommand("plugin", "<args>")'],
 \ ["Lprocess",         "s:CompleteCommand", "*",   'ctrl.doProcess("<args>")'],
