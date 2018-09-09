@@ -71,6 +71,7 @@ class LLDBController(object):
 
     self.dbg = lldb.SBDebugger.Create()
     self.commandInterpreter = self.dbg.GetCommandInterpreter()
+    self.commandInterpreter.HandleCommand("settings set target.load-script-from-symbol-file false", lldb.SBCommandReturnObject())
 
     self.ui = UI()
 
