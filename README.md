@@ -1,4 +1,4 @@
-LLDB Vim Frontend
+LLDB Vim Frontend (UNMAINTAINED)
 =================
 
 This plugin provides lldb debbuging integration including
