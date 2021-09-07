@@ -5,9 +5,19 @@
 "  License:     Same License as Vim itself
 "  --------------------------------------------------------------------
 
-if (exists('g:loaded_lldb') && g:loaded_lldb) || v:version < 703 || &cp || !has('python')
-    finish
+if (exists('g:loaded_lldb') && g:loaded_lldb) || &cp
+	echoerr "" " any suggestions?
+	finish
 endif
+if v:version < 703
+	echoerr "vim-lldb: vim version is too low"
+	finish
+endif
+if !has('python')
+	echoerr "vim-lldb: your vim must be compiled with python 2.x support"
+	finish
+endif
+
 let g:loaded_lldb = 1
 
 "
